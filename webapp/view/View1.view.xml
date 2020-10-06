@@ -1,0 +1,44 @@
+<mvc:View controllerName="demo.ZCustomers.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+xmlns:f="sap.ui.layout.form">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page title="Customers">
+					<content>
+						<Button text="Get Customer List" press="onPress"/>
+						<HBox width="100%" visible="false" id="idList">
+							<items>
+								<List items="{m2>/Customers}">
+									<items>
+										<CustomListItem type="Active" press="onItemPress">
+											<content>
+												<VBox>
+													<items>
+														<Title text="{m2>CustomerID}"/>
+														<Text text="{m2>CompanyName}"/>
+													</items>
+												</VBox>
+											</content>
+										</CustomListItem>
+									</items>
+								</List>
+								<VBox class="sapUiSmallMargin">
+									<f:SimpleForm id="SimpleFormDisplay354" editable="false" layout="ResponsiveGridLayout" title="Address" labelSpanXL="3" labelSpanL="3"
+										labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+										columnsL="1" columnsM="1" singleContainerFullSize="false">
+										<f:content>
+											<Label text="ID"/>
+											<Text text="{m2>CustomerID}"/>
+											<Label text="Company Name"/>
+											<Text text="{m2>CompanyName}"/>
+										</f:content>
+									</f:SimpleForm>
+								</VBox>
+							</items>
+						</HBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
